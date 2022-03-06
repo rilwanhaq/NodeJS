@@ -1,0 +1,11 @@
+table{
+  margin: 10px;
+}
+.btn{
+    margin: 15px;
+    padding: 10px;
+  }
+  .btn-primary{
+    background-color: #4CAF50;
+    color: white;
+  }
