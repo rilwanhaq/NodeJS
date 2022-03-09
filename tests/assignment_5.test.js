@@ -91,7 +91,7 @@ describe('assignment_5', () => {
             .send({ name: faker.lorem.words(), body: faker.lorem.sentence(), image: faker.image.nature() })
             .set('Authorization', `Bearer ${user_one_jwt}`);
 
-        user_one_post = response.body?.post?._id;
+        user_one_post = response.body?.data?._id;
         expect(response.statusCode).toBe(200);
 
         response = await request(baseUrl)
@@ -100,7 +100,7 @@ describe('assignment_5', () => {
             .send({ name: faker.lorem.words(), body: faker.lorem.sentence(), image: faker.image.nature() })
             .set('Authorization', `Bearer ${user_two_jwt}`);
 
-        user_two_post = response.body?.post?._id;
+        user_two_post = response.body?.data?._id;
         expect(response.statusCode).toBe(200);
     });
 

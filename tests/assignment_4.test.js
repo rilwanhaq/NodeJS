@@ -43,9 +43,9 @@ describe('assignment_4', () => {
         
         const userEditBtn = document.querySelector(`#edit-${name}`);
 
-        const id = userEditBtn.parentElement.getAttribute('action').split('users/')[1];
+        const id = userEditBtn.parentElement.getAttribute('action').split('/')[2];
 
-        await request(baseUrl).delete('/users/' + id);
+        await request(baseUrl).delete('/users/' + id+'/delete?_method=DELETE');
 
         const userDeleteResponse = await request(baseUrl)
             .get('/');
