@@ -9,7 +9,7 @@ const { body, param, validationResult } = require("express-validator")
 
 const router = express.Router()
 
-router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser());
 // =========================== REGISTRATION =============================
 router.post("/register", body("name"), body("email"), body("password"), async (req, res) => {
     console.log(req.body);
