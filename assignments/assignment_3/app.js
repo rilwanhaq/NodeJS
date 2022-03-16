@@ -17,7 +17,7 @@ for(let i=0; i<5; i++){
         email: faker.internet.email(),
     })
 }
-// console.log(users);
+
 app.get('/', (req, res) => {
     res.render("index.ejs",{users})
 });

@@ -22,7 +22,6 @@ function getNameFromReadLine() {
         console.log(name);
         readline.close();
     });
-    return
 }
 
 module.exports = {
